@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>acceuil</title>
+    <link rel="stylesheet" type="text/css" href="navigation.css">
+    <script src="creatediv.js"></script>
+</head>
+
+<body>
+    <div class="colm">
+        <div class="navigation">
+            <ul>
+                <li class="list active">
+                    <a href="#" onclick="change('home')">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="text">acceuil</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#" onclick="change('profil')">
+                        <span class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
+                        <span class="text">Profil</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#" onclick="change('post')">
+                        <span class="icon">
+                            <ion-icon name="duplicate-outline"></ion-icon>
+                        </span>
+                        <span class="text">Post</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#" onclick="change('reglage')">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="text">réglage</span>
+                    </a>
+                </li>
+                <div class="indicator"></div>
+            </ul>
+        </div>
+
+        <div class="div_text" id="profil">profil</div>
+        <div class="div_text" id="home">home</div>
+        <div class="div_text" id="reglage">réglage</div>
+        <div class="div_text" id="post">post</div>
+
+    </div>
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink() {
+            list.forEach((item) => item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item) => item.addEventListener('mousemove', activeLink));
+        function change(id) {
+            var e = document.getElementById(id);
+            e.style.display = 'block';
+            if (id != "post") {
+                var non = document.getElementById('post');
+                non.style.display = 'none';
+            }
+            if (id != "reglage") {
+                var non = document.getElementById('reglage');
+                non.style.display = 'none';
+            }
+            if (id != "home") {
+                var non = document.getElementById('home');
+                non.style.display = 'none';
+            }
+            if (id != "profil") {
+                var non = document.getElementById('profil');
+                non.style.display = 'none';
+            }
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
