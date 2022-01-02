@@ -152,6 +152,11 @@ body
     padding: 5px;
     
 }
+.colm div img {
+    max-height: 200px;
+    max-width: 100px;
+    transform: translateX(200px);
+}  
 #post{
     display: none;
 }
