@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap');
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Oswald',sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:#8b8b8b;;
+}
+.container {
+    perspective: 800px;
+	perspective-origin: 50% 100px;
+}
+.cube {
+    position: relative;
+	width: 200px;
+	transform-style: preserve-3d;
+    transform:rotateY(30deg) ;
+    transition:1s;
+  
+  }
+  .cube:hover {
+      transform: rotateY(360deg) rotateX(80deg);
+      transition: 3s;
+  }
+.face {
+    position: absolute;
+	width: 200px;
+	height: 200px;
+    transition: 0.5s;
+}
+
+.front{
+    background: #c93c3cbe;
+    transform: rotateY(  0deg) translateZ(100px);
+}
+.back{
+    background: #48c93cbe;
+    transform: rotateY(180deg) translateZ(100px); 
+    
+}
+.right{
+    background: #e9d83ebe;
+    transform: rotateY( 90deg) translateZ(100px);
+}
+.left{
+    background: #3ca8c9be;
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.top{
+    background: #5b3cc9be;
+    transform: rotateX( 90deg) translateZ(100px); 
+}
+.bottom{
+    background: #c93caabe;
+    transform: rotateX(-90deg) translateZ(100px); 
+}
+img{
+    width: 100%;
+}
