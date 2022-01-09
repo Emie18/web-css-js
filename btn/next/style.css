@@ -1,0 +1,71 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+    transition: 0.5s;
+}
+body{
+    background: rgb(28, 25, 39);
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+a{
+    transform: skewX(-15deg);
+    text-decoration: none;
+    width: 300px; height: 100px;
+    background: rgb(240, 108, 108);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 6px 6px 0 rgb(138, 52, 52);
+    position: relative;
+}
+.text{
+    color: #fff;
+    font-weight: 700;
+    font-size: 50px;
+    position: absolute;
+    left: 50px;
+}
+.fleche{
+    position: absolute;
+    right:20px;
+    color: rgb(138, 50, 50);
+    font-weight: 500;
+    font-size: 90px;
+}
+a:hover{
+    width: 400px;
+    box-shadow: 10px 10px 0 rgb(138, 50, 50);
+}
+a:hover .fleche{
+    right: 110px;
+}
+a:hover .zero{
+    animation: color_anime 1s infinite 0.2s;
+}
+a:hover .un{
+    right: 60px; 
+    animation: color_anime 1s infinite 0.4s;
+}
+a:hover .deux{
+    right: 10px; 
+    animation: color_anime 1s infinite 0.6s;
+}
+
+/* SVG animations */
+
+@keyframes color_anime{
+    from {
+        color: rgba(138, 50, 50, 0.479);
+    }
+    50% {
+        color: rgba(138, 50, 50, 0.719);
+    }
+    100% {
+        color: rgb(138, 50, 50);;
+    }
+}
