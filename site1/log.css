@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Cabin:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Lobster+Two&family=Oswald:wght@300;307;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(50,41,43,1) 100%);
+}
+
+form{
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-radius:20px;
+    padding: 10px;
+    height: 300px;
+    width: 300px;
+    background:rgba(255, 255, 255, 0.2);
+    position: relative;
+    backdrop-filter: blur(5px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0,0.2),
+    5px 5px 20px rgba(0, 0, 0,0.2);
+    z-index: 2;
+}
+p{
+    font-size: 2rem;
+    font-family: 'Assistant';
+    color: #fff;
+}
+input{
+
+    background-color: rgba(255, 255, 255, 0.5);
+    width:100%;
+    font-size: 1.5rem;
+    color: rgb(19, 8, 68);
+    border:none;
+    border-radius: 5px;
+}
+input:focus{
+    border:none;
+    outline: none;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+}
+.btn{
+    background: rgb(19, 8, 68);
+    border:3px solid rgb(19, 8, 68);
+    width: 50%; height: 50px;
+    position: absolute;
+    left: 75px;
+    bottom: 40px;
+    color: white;
+    transition:0.5s ease-in-out;
+}
+.btn:hover{
+    width: 60%; height: 60px;
+    left: 60px;
+}
+.container{
+    position: relative;
+    
+}
+.deco{
+    z-index:0;
+    background: rgba(159, 153, 248, 0.486);
+    width: 100px;
+    height: 100px;
+    border-radius:20px;
+    position: absolute;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0,0.2),
+    5px 5px 20px rgba(0, 0, 0,0.2);
+    /* filter:blur(1px); */
+    backdrop-filter: blur(5px);
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+}
+
+.deco:nth-child(2){
+    top:-50px;
+    left:-50px;
+}
+.deco:nth-child(3){
+    top:90px;
+    right:-70px;
+    width:120px;
+    height:120px;
+}
+.deco:nth-child(4){
+    bottom:-100px;
+    left:-120px;
+    height:150px;width:150px;
+    z-index: 2;
+}
+.deco:nth-child(5){
+    right:-140px;
+    bottom:-140px;
+}
+.deco:nth-child(6){
+    left:110px;
+    top:250px;
+}
